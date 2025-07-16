@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dancing Script", cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: honeydew;
+  margin: 4px;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+
+header h1 {
+  font-size: 22px;
+  color: lightblue;
+  font-weight: bold;
+}
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+
+header nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 6px 12px;
+
+  transition: background 0.3s, color 0.3s;
+}
+
+
+header nav ul li a:hover {
+  border-bottom: 2px solid lightblue;
+  color: green;
+  
+}
+
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    gap: 20px;
+    
+    }
+.divhead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image{
+    width: 70px;
+
+}
+.name{
+    color: rgb(195, 213, 230);
+}
+.box {
+  width: 360px;
+  height: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.box:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 6px 30px rgba(90, 36, 36, 0.2);
+   
+}
+.content{
+   font-family: "Dancing Script", cursive;
+   color:#21618c  ;
+}
+footer {
+  background-color: honeydew; 
+  color: black;
+  padding: 20px 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: black; 
+}
+
+/* 📱 Mobile: Small screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #root {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .divhead {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .image {
+    width: 80px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* 💻 Tablets: Medium screens */
+@media (min-width: 601px) and (max-width: 992px) {
+  #root {
+    justify-content: center;
+  }
+
+  .box {
+    width: 45%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
