@@ -1,10 +1,4 @@
-// console.log(data())
 
-// const data = async () => {
-//   const readdata = await fetch('https://dummyjson.com/test')
-//   const showdata = await readdata.json();
-//   console.log(showdata); 
-// }
 
 const data= fetch('https://dummyjson.com/users');
       data.then((value)=>{ return (value.json())}).then((show)=>{
@@ -64,6 +58,20 @@ const data= fetch('https://dummyjson.com/users');
             add.innerText = `Address : ${i.address.address},${i.address.city},${i.address.state},${i.address.postalCode}`;
             add.className ='content'
             
+        let btn =document.getElementById('eye')
+            btn.innerText ='👁️‍🗨️';
+        let colors= false;
+
+
+        btn.addEventListener('click',()=>{
+            if(colors){
+                document.body.style.backgroundColor='white';
+            }else{
+                document.body.style.backgroundColor='#34495e'
+            }
+            colors = !colors;
+        })
+
         header.appendChild(name);
         header.appendChild(img);
               div.appendChild(header)
